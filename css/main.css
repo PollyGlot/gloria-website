@@ -8,7 +8,6 @@ body {
   background-color: #fff !important;
   height: 115px !important;
   border-bottom: 1px solid #f2f2f2;
-  /*box-shadow: 0px 0px 2px 1px #f2f2f2;*/
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -127,23 +126,17 @@ body {
 }
 
 .intro-header {
-  padding-top: 210px;
-  padding-bottom: 230px;
+  padding: 210px 0;
   text-align: center;
   color: #f8f8f8;
-  background: url(https://cloud.githubusercontent.com/assets/3662505/5810361/9d248cce-a04d-11e4-9d12-35ead4b2b9dd.jpg) no-repeat left top fixed;
+  background: url(../images/10-1.jpg) no-repeat left top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  /*position: fixed;*/
-  top: 0;
-  left: 0;
-
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
+/* top: 0;
+  left: 0;*/
+  /*min-height: 100%;*/
 }
 
 .line-title {
@@ -152,7 +145,7 @@ body {
   margin: 50px auto 0;
 }
 
-.intro-message h1 {
+.intro-header h1 {
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 400;
@@ -160,7 +153,7 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
 }
 
-.intro-message h3 {
+.intro-header p {
   font-size: 20px;
   font-weight: 400;
   max-width: 750px;
@@ -181,6 +174,10 @@ body {
   background-color: #35e47f;
   border: 2px solid #35e47f;
   color: #fff;
+}
+
+.list-inline {
+  margin-right: 10px;
 }
 
 .white-button {
@@ -210,7 +207,7 @@ h2 {
   margin: 0 0 50px 0;
 }
 
-figure {
+/*figure {
   position: relative;
   float: left;
   overflow: hidden;
@@ -218,7 +215,7 @@ figure {
   min-width: 300px;
   max-width: 580px;
   max-height: 200px;
-  /*width: 48%;*/
+  width: 48%;
   background: rgba(52, 73, 94, .9);
   text-align: center;
   cursor: pointer;
@@ -236,7 +233,7 @@ figure {
 .col-md-6 figure figcaption {
   color: #fff;
   text-transform: uppercase;
-  /*font-size: 20px;*/
+  font-size: 20px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -255,8 +252,6 @@ figure {
   height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
 .col-md-6 figure figcaption > a {
   z-index: 999;
   text-indent: 200%;
@@ -276,10 +271,6 @@ figure {
   margin: 10px 0 0 20px;
   font-size: 15px;
 }
-
----------------
-/***** Lily *****/
-/*---------------*/
 
 figure.effect-lily img {
   max-width: none;
@@ -331,7 +322,151 @@ figure.effect-lily:hover p {
   transition-delay: 0.05s;
   -webkit-transition-duration: 0.35s;
   transition-duration: 0.35s;
+}*/
+
+
+/* Common style */
+figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+    margin: 0 0 30px 0;
+  min-width: 300px;
+  max-width: 580px;
+  /*max-height: 400px;*/
+  /*height: auto;*/
+  /*background: #3085a3;*/
+  background: rgba(52, 73, 94, .9) !important;
+  text-align: center;
+  cursor: pointer;
 }
+
+.col-md-6 figure img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-size: cover;
+}
+
+figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+  pointer-events: none;
+}
+
+figure figcaption,
+figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+figure h2 span {
+  font-weight: 800;
+}
+
+figure h2,
+figure p {
+  margin: 0;
+}
+
+figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+
+/*-----------------*/
+/***** Goliath *****/
+/*-----------------*/
+
+/*.col-md-4 figure.effect-goliath {
+  background: rgba(52, 73, 94, .8);
+  background: #2ecc71;
+}*/
+
+figure.effect-goliath img,
+figure.effect-goliath h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-goliath img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-goliath h2,
+figure.effect-goliath p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+}
+
+figure.effect-goliath p {
+  text-transform: none;
+  font-size: 90%;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,50px,0);
+  transform: translate3d(0,50px,0);
+}
+
+figure.effect-goliath:hover img {
+  -webkit-transform: translate3d(0,-80px,0);
+  transform: translate3d(0,-80px,0);
+  opacity: 1;
+}
+
+figure.effect-goliath:hover h2 {
+  -webkit-transform: translate3d(0,-100px,0);
+  transform: translate3d(0,-100px,0);
+}
+
+figure.effect-goliath:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+
+
+
+
+
+
+
+
+
 
 .load-wrap {
   text-align: center;
